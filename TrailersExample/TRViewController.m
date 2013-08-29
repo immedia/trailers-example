@@ -59,14 +59,13 @@
   TRTrailer *trailer = self.trailers[indexPath.row];
   
   cell.titleLabel.text = trailer.title;
-  cell.tag = indexPath.row;
   [cell.imageView setImageWithURL:[NSURL URLWithString:trailer.image]];
   
   return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(TRTrailerCell *)sender {
-  TRTrailer *trailer = self.trailers[sender.tag];
+  TRTrailer *trailer = self.trailers[[[self.collectionView indexPathsForSelectedItems][0] row]];
   TRDetailViewController *detailVC = segue.destinationViewController;
   detailVC.trailer = trailer;
 }
