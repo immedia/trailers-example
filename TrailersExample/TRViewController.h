@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TRViewController : UIViewController
+@interface TRViewController : UICollectionViewController
 
 @end
