@@ -59,6 +59,7 @@
   TRTrailer *trailer = self.trailers[indexPath.row];
   
   cell.titleLabel.text = trailer.title;
+  cell.imageView.image = nil;
   [cell.imageView setImageWithURL:[NSURL URLWithString:trailer.image]];
   
   return cell;
